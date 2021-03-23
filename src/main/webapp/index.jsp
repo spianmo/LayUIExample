@@ -41,10 +41,13 @@
     <div class="layui-form-item">
         <div class="layui-input-block">
             <div class="layui-btn-group">
-                <button class="layui-btn" lay-submit lay-filter="formDemo">立即登录</button>
+                <button class="layui-btn" style="margin-left: 10px" lay-submit lay-filter="formDemo">立即登录</button>
                 <button type="reset" class="layui-btn layui-btn-primary">忘记密码</button>
             </div>
         </div>
+    </div>
+    <div class="layui-form-item">
+        <a style="padding-left: 10px;color: #2badce" href="register.jsp">没有账号？立即注册</a>
     </div>
 </form>
 <script src="./layui/layui.js"></script>
