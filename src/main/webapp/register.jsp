@@ -68,7 +68,7 @@
         </div>
     </div>
     <div class="layui-form-item">
-        <a style="padding-left: 10px;color: #2badce" href="register.jsp">返回登录</a>
+        <a style="padding-left: 10px;color: #2badce" href="index.jsp">返回登录</a>
     </div>
 </form>
 
