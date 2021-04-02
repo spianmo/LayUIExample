@@ -28,10 +28,17 @@
 
 <body>
 
-<form class="layui-form layui-layout layui-layout-register" action="doRegister.jsp" method="post">
+<form class="layui-form layui-layout layui-layout-register" action="/register" method="post">
     <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
         <legend>注册账户</legend>
     </fieldset>
+    <div class="layui-form-item">
+        <label class="layui-form-label">用户昵称</label>
+        <div class="layui-input-inline">
+            <input type="text" name="reader" required lay-verify="required" placeholder="请输入你的昵称" autocomplete="off"
+                   class="layui-input">
+        </div>
+    </div>
     <div class="layui-form-item">
         <label class="layui-form-label">用户账号</label>
         <div class="layui-input-inline">
@@ -49,16 +56,9 @@
     <div class="layui-form-item">
         <label class="layui-form-label">确认密码</label>
         <div class="layui-input-inline">
-            <input type="password" name="passwords" required lay-verify="pwd" placeholder="请再次输入密码" autocomplete="off"
+            <input type="password" name="repassword" required lay-verify="pwd" placeholder="请再次输入密码" autocomplete="off"
                    class="layui-input"
                    id="pass2">
-        </div>
-    </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">性 别</label>
-        <div class="layui-input-block">
-            <input type="radio" name="sex" value="男" title="男">
-            <input type="radio" name="sex" value="女" title="女" checked>
         </div>
     </div>
     <div class="layui-form-item">

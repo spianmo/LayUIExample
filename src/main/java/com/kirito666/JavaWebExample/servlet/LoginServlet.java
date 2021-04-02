@@ -1,4 +1,4 @@
-package com.kirito666.JavaWebExample;
+package com.kirito666.JavaWebExample.servlet;
 
 import com.kirito666.JavaWebExample.service.LoginService;
 
