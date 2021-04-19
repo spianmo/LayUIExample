@@ -22,7 +22,7 @@
 <%@include file="toast.jsp" %>
 <form class="layui-form layui-layout layui-layout-login" action="login" method="post">
     <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-        <legend>登录演示</legend>
+        <legend>NIIU图书馆</legend>
     </fieldset>
     <div class="layui-form-item">
         <label class="layui-form-label">账号</label>
@@ -39,6 +39,17 @@
         </div>
     </div>
     <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">账号角色</label>
+            <div class="layui-input-block">
+                <input type="radio" name="role" value="0"
+                       title="管理员">
+                <input type="radio" name="role" value="1"
+                       title="用户" checked>
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
         <div class="layui-input-block">
             <div class="layui-btn-group">
                 <button class="layui-btn" style="margin-left: 10px" lay-submit lay-filter="formDemo">立即登录</button>
@@ -51,5 +62,13 @@
     </div>
 </form>
 <script src="./layui/layui.js"></script>
+<script>
+    layui.use('form', function () {
+        var form = layui.form;
+
+
+        //各种基于事件的操作，下面会有进一步介绍
+    });
+</script>
 </body>
 </html>

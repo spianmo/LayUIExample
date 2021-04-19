@@ -1,6 +1,6 @@
 package com.kirito666.JavaWebExample.servlet;
 
-import com.kirito666.JavaWebExample.service.LoginService;
+import com.kirito666.JavaWebExample.service.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,7 +13,7 @@ import java.net.URLEncoder;
 @WebServlet(name = "AdminLoginServlet", urlPatterns = "/admin/login")
 public class AdminLoginServlet extends HttpServlet {
 
-    private LoginService loginService = new LoginService();
+    private UserService userService = new UserService();
 
     @Override
     protected void doGet(HttpServletRequest req,
@@ -28,7 +28,7 @@ public class AdminLoginServlet extends HttpServlet {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
 
-        String result = loginService.adminLogin(username, password,
+        String result = userService.adminLogin(username, password,
                 req.getSession());
         if ("1".equals(result)) {
             resp.sendRedirect("/admin/main.jsp");

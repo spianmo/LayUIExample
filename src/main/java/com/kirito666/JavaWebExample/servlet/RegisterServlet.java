@@ -1,8 +1,7 @@
 package com.kirito666.JavaWebExample.servlet;
 
 import com.kirito666.JavaWebExample.bean.User;
-import com.kirito666.JavaWebExample.dao.LoginDao;
-import com.kirito666.JavaWebExample.service.RegisterService;
+import com.kirito666.JavaWebExample.service.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,11 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.SQLException;
-
+import java.net.URLEncoder;
 
 @WebServlet(name = "RegisterServlet", urlPatterns = "/register")
 public class RegisterServlet extends HttpServlet {
+    UserService registerService = new UserService();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -23,40 +22,32 @@ public class RegisterServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("utf-8");
-        resp.setCharacterEncoding("utf-8");
-
-
         User register = null;
-        RegisterService registerService = new RegisterService();
+
         String result = "注册失败";
-        String userName, password, reader;
+        //1【调用请求对象】读取【请求头】参数信息，得到用户注册信息
+        String userName, password, reader, confirmPassword;
         userName = req.getParameter("username");
         password = req.getParameter("password");
         reader = req.getParameter("reader");
-        register = new User(userName, password, reader);
+        confirmPassword = req.getParameter("repassword");
+        if (password != null && password.equals(confirmPassword)) {
+            register = new User(userName, password, reader);
 
-        LoginDao loginDao = new LoginDao();
-        User byName = loginDao.selectOne(register.getUsername());
-        if (byName != null) {
-            result = "用户已经存在";
-        } else {
-            try {
-                result = registerService.register(register);
-            } catch (SQLException e) {
-                e.printStackTrace();
+            result = registerService.register(register);
+
+            //注册成功：——>跳转至登录页面进行登录
+            //注册失败：——>注册页面提示：注册失败
+            if (result.equals("注册成功")) {
+                // 注册
+                resp.sendRedirect("/index.jsp?message=" + URLEncoder.encode(result, "utf-8"));
+            } else {
+                req.getRequestDispatcher("/register.jsp?message=" + result).forward(req, resp);
+
             }
-
-        }
-        //注册成功：——>跳转至登录页面进行登录
-        //注册失败：——>注册页面提示：注册失败
-        if (result.equals("注册成功")) {
-            // 注册
-            resp.sendRedirect("/index.jsp?message=" + result);
         } else {
-
-            req.getRequestDispatcher("/register.jsp?message=" + result).forward(req, resp);
-
+            req.getRequestDispatcher("/register.jsp?message=" +
+                    "两次密码不一致").forward(req, resp);
         }
     }
 }

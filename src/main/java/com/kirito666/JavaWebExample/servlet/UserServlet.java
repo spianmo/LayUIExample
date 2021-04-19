@@ -1,6 +1,6 @@
 package com.kirito666.JavaWebExample.servlet;
 
-import com.kirito666.JavaWebExample.service.LoginService;
+import com.kirito666.JavaWebExample.service.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,9 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "LoginServlet", urlPatterns = "/login")
-public class LoginServlet extends HttpServlet {
+public class UserServlet extends HttpServlet {
 
-    private LoginService loginService = new LoginService();
+    private UserService userService = new UserService();
 
     @Override
     protected void doGet(HttpServletRequest req,
@@ -23,13 +23,11 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req,
                           HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("utf-8");
-        resp.setCharacterEncoding("utf-8");
 
         String username = req.getParameter("username");
         String password = req.getParameter("password");
 
-        String result = loginService.login(username, password,
+        String result = userService.login(username, password,
                 req.getSession());
         if ("1".equals(result)) {
             resp.sendRedirect("/main.jsp");
