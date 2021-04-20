@@ -908,105 +908,109 @@
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <key id="274" parent="232" name="PRIMARY">
+    <column id="274" parent="232" name="header">
+      <Position>7</Position>
+      <DataType>varchar(200)|0s</DataType>
+    </column>
+    <key id="275" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="275" parent="233" name="id">
+    <column id="276" parent="233" name="id">
       <Position>1</Position>
       <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="276" parent="233" name="name">
+    <column id="277" parent="233" name="name">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
     </column>
-    <column id="277" parent="233" name="description">
+    <column id="278" parent="233" name="description">
       <Position>3</Position>
       <DataType>varchar(1000)|0s</DataType>
     </column>
-    <key id="278" parent="233" name="PRIMARY">
+    <key id="279" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="279" parent="234" name="id">
+    <column id="280" parent="234" name="id">
       <Position>1</Position>
       <DataType>int(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="280" parent="234" name="name">
+    <column id="281" parent="234" name="name">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
     </column>
-    <column id="281" parent="234" name="account">
+    <column id="282" parent="234" name="account">
       <Position>3</Position>
       <DataType>varchar(20)|0s</DataType>
     </column>
-    <column id="282" parent="234" name="password">
+    <column id="283" parent="234" name="password">
       <Position>4</Position>
       <DataType>varchar(30)|0s</DataType>
     </column>
-    <column id="283" parent="234" name="email">
+    <column id="284" parent="234" name="email">
       <Position>5</Position>
       <DataType>varchar(30)|0s</DataType>
     </column>
-    <key id="284" parent="234" name="PRIMARY">
+    <key id="285" parent="234" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="285" parent="235" name="id">
+    <column id="286" parent="235" name="id">
       <Position>1</Position>
       <DataType>int(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="286" parent="235" name="card_id">
+    <column id="287" parent="235" name="card_id">
       <Position>2</Position>
       <DataType>int(20)|0s</DataType>
     </column>
-    <column id="287" parent="235" name="detail">
+    <column id="288" parent="235" name="detail">
       <Position>3</Position>
       <DataType>varchar(1000)|0s</DataType>
     </column>
-    <column id="288" parent="235" name="public_date">
+    <column id="289" parent="235" name="public_date">
       <Position>4</Position>
       <DataType>datetime|0s</DataType>
     </column>
-    <key id="289" parent="235" name="PRIMARY">
+    <key id="290" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="290" parent="236" name="id">
+    <column id="291" parent="236" name="id">
       <Position>1</Position>
       <DataType>int(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="291" parent="236" name="borrow_num">
+    <column id="292" parent="236" name="borrow_num">
       <Position>2</Position>
       <Comment>限制本数</Comment>
       <DataType>int(10)|0s</DataType>
     </column>
-    <column id="292" parent="236" name="limit_day">
+    <column id="293" parent="236" name="limit_day">
       <Position>3</Position>
       <Comment>限制天数</Comment>
       <DataType>int(10)|0s</DataType>
     </column>
-    <column id="293" parent="236" name="borrow_library">
+    <column id="294" parent="236" name="borrow_library">
       <Position>4</Position>
       <DataType>varchar(20)|0s</DataType>
     </column>
-    <column id="294" parent="236" name="overtime_fee">
+    <column id="295" parent="236" name="overtime_fee">
       <Position>5</Position>
       <DataType>float(10,3 digit)|0s</DataType>
     </column>
-    <key id="295" parent="236" name="PRIMARY">
+    <key id="296" parent="236" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

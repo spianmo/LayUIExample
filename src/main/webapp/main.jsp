@@ -29,15 +29,15 @@
 
 <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
-        <div class="layui-logo" style="font-size: 25px">图书馆</div>
+        <div class="layui-logo" style="font-size: 25px">NIIU图书馆</div>
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
                 <a href="javascript:;">
-                    <img src="<%=user.getUsername()%>"
+                    <img src="<%=user.getHeader()%>"
                          class="layui-nav-img">
                     <%=user.getReader()%>
                 </a>
-                <dl class="layui-nav-child">
+                <dl class="layui-nav-child" style="height: fit-content">
                     <dd><a href="javascript:;" name="borrow"
                            title="个人信息"
                            content="./personalInfo.jsp" id="4">个人信息
@@ -48,7 +48,7 @@
                     </a></dd>
                 </dl>
             </li>
-            <li class="layui-nav-item"><a href="">退出</a></li>
+            <li class="layui-nav-item"><a href="./index.jsp">退出</a></li>
         </ul>
     </div>
 
