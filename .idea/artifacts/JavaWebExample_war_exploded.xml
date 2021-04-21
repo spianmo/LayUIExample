@@ -24,6 +24,7 @@
           <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
           <element id="library" level="project" name="Maven: taglibs:standard:1.1.2" />
           <element id="library" level="project" name="Maven: commons-io:commons-io:2.7" />
+          <element id="library" level="project" name="Maven: org.jetbrains:annotations:20.1.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">

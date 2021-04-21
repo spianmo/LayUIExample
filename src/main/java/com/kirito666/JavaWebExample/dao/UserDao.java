@@ -19,7 +19,8 @@ public class UserDao {
                              new Object[]{username})) {
 
             while (resultSet.next()) {
-                user = new User(resultSet.getString("username"),
+                user = new User(resultSet.getLong("id"),
+                        resultSet.getString("username"),
                         resultSet.getString("password"),
                         resultSet.getString("reader"),
                         resultSet.getString("header"),
