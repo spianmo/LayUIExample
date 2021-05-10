@@ -40,7 +40,7 @@ public class SearchBooksServlet extends HttpServlet {
         List<Book> books = new ArrayList<>();
         int count = 0;
         if (param == null) {
-            books = bookService.searchAllBooks(String.valueOf(((User)req.getSession().getAttribute("user")).getId()), pageNum, pageSize);
+            books = bookService.searchAllBooks(String.valueOf(((User) req.getSession().getAttribute("user")).getId()), pageNum, pageSize);
         }
 
         count = bookService.countNum();

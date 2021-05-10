@@ -17,18 +17,18 @@
     Class.forName("com.mysql.cj.jdbc.Driver");
     try {
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library?characterEncoding=utf-8&serverTimeZone=UTC"
-                ,"Kirito66"
-                ,"123456");
+                , "Kirito66"
+                , "123456");
         String sql = "select * from borrow_card where username = ?";
-        try(PreparedStatement preparedStatement = conn.prepareStatement(sql)){
-            preparedStatement.setString(1,username);
-            try(ResultSet rs = preparedStatement.executeQuery()){
-                while(rs.next()){
-                    if (password.equals(rs.getString("password"))){
+        try (PreparedStatement preparedStatement = conn.prepareStatement(sql)) {
+            preparedStatement.setString(1, username);
+            try (ResultSet rs = preparedStatement.executeQuery()) {
+                while (rs.next()) {
+                    if (password.equals(rs.getString("password"))) {
                         response.sendRedirect("./main.jsp");
-                    }else{
+                    } else {
 %>
-    <jsp:forward page="index.jsp"></jsp:forward>
+<jsp:forward page="index.jsp"></jsp:forward>
 <%
                     }
                 }

@@ -15,7 +15,7 @@
     <title>图书馆</title>
     <link rel="stylesheet" href="/layui/css/layui.css"/>
     <style>
-        .layui-show{
+        .layui-show {
             width: 100%;
             height: 100%;
         }
