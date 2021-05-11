@@ -7,6 +7,9 @@ import com.kirito666.JavaWebExample.utils.JDBCUtil;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * @author Finger
+ */
 public class UserDao {
 
     public User selectOne(String username) {

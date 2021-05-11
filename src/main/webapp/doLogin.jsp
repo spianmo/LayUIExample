@@ -19,7 +19,7 @@
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library?characterEncoding=utf-8&serverTimeZone=UTC"
                 , "Kirito66"
                 , "123456");
-        String sql = "select * from borrow_card where username = ?";
+        String sql = "SELECT * FROM borrow_card WHERE username = ?";
         try (PreparedStatement preparedStatement = conn.prepareStatement(sql)) {
             preparedStatement.setString(1, username);
             try (ResultSet rs = preparedStatement.executeQuery()) {

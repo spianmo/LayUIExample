@@ -4,6 +4,9 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
+/**
+ * @author Finger
+ */
 @WebFilter(filterName = "AdminFilter", urlPatterns = "/login")
 public class AdminFilter implements Filter {
     @Override

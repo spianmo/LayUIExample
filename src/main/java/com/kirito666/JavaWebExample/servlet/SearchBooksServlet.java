@@ -17,6 +17,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * @author Finger
+ */
 @WebServlet(name = "SearchBooksServlet", urlPatterns = "/book/search")
 public class SearchBooksServlet extends HttpServlet {
 

@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * @author Finger
+ */
 @WebServlet(name = "LoginServlet", urlPatterns = "/login")
 public class UserServlet extends HttpServlet {
 

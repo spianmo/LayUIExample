@@ -11,13 +11,6 @@
     </style>
 </head>
 <body>
-<%--<div class="login">
-    <div class="login-layout">
-        <form class="layui-form" action="doLogin.jsp" method="post">
-
-        </form>
-    </div>
-</div>--%>
 <div class="layui-layout layui-layout-login">
     <h1>
         <strong>Login Demo</strong>

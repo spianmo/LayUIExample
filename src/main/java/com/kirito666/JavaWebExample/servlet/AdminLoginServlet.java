@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.net.URLEncoder;
 
+/**
+ * @author Finger
+ */
 @WebServlet(name = "AdminLoginServlet", urlPatterns = "/admin/login")
 public class AdminLoginServlet extends HttpServlet {
 

@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.net.URLEncoder;
 
+/**
+ * @author Finger
+ */
 @WebServlet(name = "RegisterServlet", urlPatterns = "/register")
 public class RegisterServlet extends HttpServlet {
     UserService registerService = new UserService();
@@ -25,7 +28,6 @@ public class RegisterServlet extends HttpServlet {
         User register = null;
 
         String result = "注册失败";
-        //1【调用请求对象】读取【请求头】参数信息，得到用户注册信息
         String userName, password, reader, confirmPassword;
         userName = req.getParameter("username");
         password = req.getParameter("password");
@@ -36,10 +38,7 @@ public class RegisterServlet extends HttpServlet {
 
             result = registerService.register(register);
 
-            //注册成功：——>跳转至登录页面进行登录
-            //注册失败：——>注册页面提示：注册失败
             if (result.equals("注册成功")) {
-                // 注册
                 resp.sendRedirect("/index.jsp?message=" + URLEncoder.encode(result, "utf-8"));
             } else {
                 req.getRequestDispatcher("/register.jsp?message=" + result).forward(req, resp);

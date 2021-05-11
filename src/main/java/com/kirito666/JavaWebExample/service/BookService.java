@@ -5,6 +5,9 @@ import com.kirito666.JavaWebExample.dao.BookDao;
 
 import java.util.List;
 
+/**
+ * @author Finger
+ */
 public class BookService {
     private BookDao bookDao = new BookDao();
 
