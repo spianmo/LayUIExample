@@ -87,4 +87,15 @@ public class BookDao {
                 });
         return result;
     }
+
+    public int borrowBook(int uid, String bookId){
+        String sql = "insert into borrow_books(book_id, card_id, " +
+                "borrow_date) values(?,?,?)";
+        int result = JDBCUtil.getInstance().executeUpdate(sql,
+                new Object[]{
+                        bookId, uid,
+                        new Date(System.currentTimeMillis())
+                });
+        return result;
+    }
 }
