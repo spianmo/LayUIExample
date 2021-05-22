@@ -39,10 +39,9 @@
         </colgroup>
         <thead>
         <tr>
-            <th>书名</th>
-            <th>作者</th>
-            <th>分类</th>
-            <th>描述</th>
+            <th>留言ID</th>
+            <th>留言详情</th>
+            <th>留言日期</th>
         </tr>
         </thead>
         <tbody>
